@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %} Gene check {% endblock %}
+
+{% block content %}
+    <h1>Check sequence, is it DNA of protein?</h1>
+    <form method="get">
+        <p>
+            Sequence:
+            <input type="text" name="sequence">
+        </p>
+        <p>
+            Is this a gene?
+            {% if sequence.startswith("ATG") %}
+                YES
+            {% elif sequence == "" %}
+
+            {% else %}
+                NO
+            {% endif %}
+        </p>
+        <button type="submit">Submit</button>
+    </form>
+{% endblock %}

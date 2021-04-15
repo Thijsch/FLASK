@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %}Amino acids list {% endblock %}
+
+{% block content %}
+    <h1>All amino acids</h1>
+    <form method="get">
+
+    </form>
+    {% for aa in aa_list.items() %}
+        <li>{{ aa[0] }}{{ aa[1][2] }}</li>
+    {% endfor %}
+{% endblock %}

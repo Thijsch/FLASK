@@ -2,10 +2,10 @@
 # 11 mei 2020
 # DNA-sequenties omzetten naar eiwit
 
-from Bio.Alphabet import IUPAC
-from Bio.Seq import Seq
-from Bio.Data import CodonTable
-from Bio import SeqIO
+from bio.Alphabet import IUPAC
+from bio.Seq import Seq
+from bio.Data import CodonTable
+from bio import SeqIO
 
 
 def seq_bewerken(seq, mito_trans_table, standard_trans_table):
@@ -17,7 +17,7 @@ def seq_bewerken(seq, mito_trans_table, standard_trans_table):
     """
 
     bio_dna = Seq(seq, IUPAC.unambiguous_dna)
-    print(coding_dna.translate(table=standard_trans_table))
+    print(bio_dna.translate(table=standard_trans_table))
 
     def conversie_gb_to_fasta(genbank_file, name_fasta_file):
         """
@@ -48,4 +48,3 @@ if __name__ == '__main__':
     standard_trans_table = CodonTable.unamibuous_dna_by_name["Standard"]
 
     seq_bewerken(seq, mito_trans_table, standard_trans_table)
-    genbank_file =

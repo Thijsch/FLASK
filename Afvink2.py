@@ -8,9 +8,9 @@ app = Flask(__name__)
 def index():
     if request.method == "POST":
         seq = request.form.get("seq", "")
-        return render_template("Gene_check.htm", seq=seq)
+        return render_template("Gene_check.html", seq=seq)
     else:
-        return render_template("Gene_check.htm", seq="Niks gevonden")
+        return render_template("Gene_check.html", seq="Niks gevonden")
 
 
     # DNAseq = request.args.get("naam", "")

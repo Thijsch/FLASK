@@ -1,0 +1,6 @@
+biopython==1.76
+Flask==1.1.2
+Jinja2>=2.11.2
+mysql-connector-python==8.0.20
+mysql==0.0.2
+bio==0.1.0
